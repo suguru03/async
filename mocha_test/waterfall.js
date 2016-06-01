@@ -4,6 +4,14 @@ var assert = require('assert');
 
 describe("waterfall", function () {
 
+    before(function() {
+      async = async.fast();
+    });
+
+    after(function() {
+      async = async.safe();
+    });
+
     it('basics', function(done){
         var call_order = [];
         async.waterfall([

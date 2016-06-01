@@ -54,7 +54,9 @@ describe('race', function () {
             done();
         });
     });
-    it('should callback in error the task arg is not an Array', function raceTest40() {
+
+    // supporting an object
+    it.skip('should callback in error the task arg is not an Array', function raceTest40() {
         var errors = [];
         async.race(null, function (err) {
             errors.push(err);
@@ -65,6 +67,15 @@ describe('race', function () {
         assert.strictEqual(errors.length, 2);
         assert.ok(errors[0] instanceof TypeError);
         assert.ok(errors[1] instanceof TypeError);
+    });
+
+    it('should callback in error the task arg is not an collection', function raceTest40() {
+        var errors = [];
+        async.race(null, function (err) {
+            errors.push(err);
+        });
+        assert.strictEqual(errors.length, 1);
+        assert.ok(errors[0] instanceof TypeError);
     });
 });
 

@@ -113,7 +113,7 @@ describe("map", function() {
         setTimeout(done, 50);
     });
 
-    it('map object', function(done) {
+    it.skip('map object', function(done) {
         async.map({
             a: 1,
             b: 2,
@@ -161,7 +161,7 @@ describe("map", function() {
         setTimeout(done, 50);
     });
 
-    it('mapSeries object', function(done) {
+    it.skip('mapSeries object', function(done) {
         async.mapSeries({
             a: 1,
             b: 2,
