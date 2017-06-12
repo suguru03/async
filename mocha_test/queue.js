@@ -781,7 +781,7 @@ describe('queue', function(){
         });
     })
 
-    it('remove', function(done) {
+    it.skip('remove', function(done) {
         var result = [];
         var q = async.queue(function(data, cb) {
             result.push(data);

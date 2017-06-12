@@ -52,7 +52,8 @@ describe('transform', function() {
         });
     });
 
-    it('transform with two arguments', function(done) {
+    // TODO no point to support this pettern
+    it.skip('transform with two arguments', function(done) {
         try {
             async.transform([1, 2, 3], function (a, v, k, callback) {
                 callback();

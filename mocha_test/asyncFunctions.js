@@ -11,7 +11,7 @@ function supportsAsync() {
     return supported;
 }
 
-describe('async function support', function () {
+describe.skip('async function support', function () {
     this.timeout(100);
 
     if (supportsAsync()) {

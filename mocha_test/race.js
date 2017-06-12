@@ -54,7 +54,9 @@ describe('race', function () {
             done();
         });
     });
-    it('should callback in error the task arg is not an Array', function raceTest40() {
+
+    // TODO Other functions ignore the invalid first argument, `race` should ignore it to keep consistancy
+    it.skip('should callback in error the task arg is not an Array', function raceTest40() {
         var errors = [];
         async.race(null, function (err) {
             errors.push(err);
